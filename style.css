@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&diplay=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar */
+nav{
+    height: 80px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+    z-index: 1000;
+}
+nav .logo{
+    font-size: 33px;
+    color: #fff;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li a:after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover:after{
+    width: 100%;
+}
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+/* End Navigation Bar */
+
+/* Home PageS */
+.home-section{
+    background-image: url("images/home-background.jpg");
+    position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+    }
+    .home-page-blur-background-margin{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .home-page-blur-background{
+        background-color: rgba(255,255,255,0.3);
+        backdrop-filter: blur(12px);
+        filter: drop-shadow(10px 10px 10px  grey);
+        padding: 25px 25px;
+        border-radius: 10px;
+    }
+    .home-page-blur-background-title{
+        padding: 15px 15px;
+    }
+    .home-page-blur-background-title h1{
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    .home-page-blur-background-para{
+        margin-top: 20px;
+    }
+    .home-page-blur-background-para p{
+        text-align: left;
+        color: #fff;
+        font-weight: 200;
+        font-family: sans-serif;
+        font-size: 17.5px;
+    }
+    
+    .scroll-down-effect{
+        color: #fff;
+        position: absolute;
+        justify-content: center;
+        padding-bottom: 25px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        bottom: 0;
+    }
+    .scroll-down-effect label{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .scroll-down-effect i{
+        font-size: 18px;
+        --fa-animation-duration: 1.5s;
+    }
+    /*End Home Page*/
+
+
+
+
+
+@media (max-width: 924px){
+    nav .menu-btn i{
+        display: block;
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+        z-index: 2;
+    }
+    nav .logo{
+        margin-right: 40px;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+        z-index: 2;
+    }
+    nav ul li{
+        margin: 40px 0;
+        z-index: 2;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+        z-index: 2;
+    }
+    nav ul li a:hover,
+    nav ul li a.active{
+    color: cyan;
+    background: none;
+    z-index: 2;
+}
+    .home-page-blur-background-margin{
+        margin-top: 30px;
+        margin-bottom: 30px;
+}
+    .home-page-blur-background-title h1{
+        font-size: 17px;
+}
+.home-page-blur-background-para p{
+    font-size: 15px;
+}
+.scroll-down-effect{
+    padding-bottom: 20px;
+}
+.scroll-down-effect label{
+    font-size: 15px;
+}
+.scroll-down-effect i{
+    font-size: 15px;
+}
+}
